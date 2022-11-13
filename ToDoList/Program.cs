@@ -1,6 +1,19 @@
+using Microsoft.EntityFrameworkCore;
+using ToDoList.Data;
+
+IConfiguration configuration = new ConfigurationBuilder()
+   .AddJsonFile("appsettings.json", true, true)
+   .Build();
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddDbContext<ToDoContext>(options =>
+{
+   options.UseSqlite(configuration.GetConnectionString("ToDoContext"));
+});
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
@@ -22,6 +35,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=ToDo}/{action=Index}/{id?}");
 
 app.Run();
