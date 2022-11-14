@@ -16,7 +16,7 @@ namespace ToDoList.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Name = table.Column<string>(type: "TEXT", nullable: false)
+                    ToDoValue = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {

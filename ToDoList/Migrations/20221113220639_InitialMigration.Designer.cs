@@ -10,7 +10,7 @@ using ToDoList.Data;
 namespace ToDoList.Migrations
 {
     [DbContext(typeof(ToDoContext))]
-    [Migration("20221113182933_InitialMigration")]
+    [Migration("20221113220639_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -25,7 +25,7 @@ namespace ToDoList.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("ToDoValue")
                         .IsRequired()
                         .HasColumnType("TEXT");
 

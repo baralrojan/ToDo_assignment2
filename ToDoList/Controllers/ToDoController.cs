@@ -27,6 +27,17 @@ namespace ToDoList.Controllers
             return View(new ToDoLists());
         }
 
-     
+       
+        /*
+        public IActionResult View()
+        {
+            var TodoList = _db.ToDoList.ToList();
+            return View(TodoList);
+        }
+        */
+        
+
+
+
     }
 }

@@ -22,7 +22,7 @@ namespace ToDoList.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("ToDoValue")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
