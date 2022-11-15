@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore;
 using ToDoList.Data;
 using ToDoList.Models;
@@ -16,25 +17,34 @@ namespace ToDoList.Controllers
             _db = ctx;
         }
 
-       public IActionResult Index(ToDoLists ToDo)
+        public IActionResult Index()
+        {
+            var TodoList = _db.ToDoList.ToList();
+            return View(TodoList);
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public RedirectResult Create(ToDoLists ToDo)
         {
             if(ModelState.IsValid)
             {
                 _db.ToDoList.Add(ToDo);
                 _db.SaveChanges();
-                return View(ToDo);
             }
-            return View(new ToDoLists());
+            return Redirect("Index");
+
         }
 
        
-        /*
-        public IActionResult View()
-        {
-            var TodoList = _db.ToDoList.ToList();
-            return View(TodoList);
-        }
-        */
+        
+      
+       
         
 
 

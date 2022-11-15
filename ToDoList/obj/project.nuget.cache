@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fWSnGy1lkMPSAuUo6fDHxskb8KpYz86NHi8EkxowiE+Sqh0mzQkYlaAjj5j2DGjsWpyuEbw+UT/y7zcjfRiX9Q==",
+  "dgSpecHash": "GNyKGM3/p9tnNAo4qu7btZaTogQoN4szehKuSVv7KY6dK77bKIxdqqPmsgU0g/RPaMNY5XCR6QXe4yaPYbQx2w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\baral\\OneDrive\\Desktop\\web_assignment\\ToDoList\\ToDoList\\ToDoList.csproj",
+  "projectFilePath": "C:\\Users\\baral\\OneDrive\\Desktop\\web_assignment\\github\\ToDo_assignment2\\ToDoList\\ToDoList.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\baral\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\baral\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

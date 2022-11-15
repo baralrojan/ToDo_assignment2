@@ -1,4 +1,4 @@
-﻿@model ToDoLists
+﻿@model ToDoList.Models.ToDoLists
 
 <section>
     <div class="container py-5 h-100">
@@ -9,7 +9,7 @@
 
                         <p class="h1 text-center mt-3 mb-4 pb-3 text-primary">
                             <i class="fas fa-check-square me-1"></i>
-                            <u>My Todo-s</u>
+                            <u>Add My Todos</u>
                         </p>
 
                         <div class="pb-2">
@@ -21,8 +21,10 @@
                                                    placeholder="Add new...">
 
                                             <div class="w-100 text-center ">
-                                                <button type="submit" value="submit" class="btn btn-primary" 
-                                                style="margin-top:20px;">Add</button>
+                                                <button type="submit" value="submit" class="btn btn-primary"
+                                                        style="margin-top:20px;">
+                                                    Add
+                                                </button>
                                             </div>
                                         </form>
                                     </div>
@@ -33,17 +35,7 @@
                         <hr class="my-4">
 
 
-                        <ul class="list-group list-group-horizontal rounded-0 bg-transparent">
-                            <li class="list-group-item d-flex align-items-center ps-0 pe-3 py-1 rounded-0 border-0 bg-transparent">
-                                <div class="form-check">
-                                    <input class="form-check-input me-0" type="checkbox" value="" id="flexCheckChecked1"
-                                           aria-label="..." checked />
-                                </div>
-                            </li>
-                            <li class="list-group-item px-3 py-1 d-flex align-items-center flex-grow-1 border-0 bg-transparent">
-                                <p class="lead fw-normal mb-0">Buy groceries for next week</p>
-                            </li>
-                        </ul>
+
                     </div>
                 </div>
             </div>
@@ -51,3 +43,10 @@
     </div>
 </section>
 
+
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

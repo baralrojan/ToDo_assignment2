@@ -10759,11 +10759,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\baral\\OneDrive\\Desktop\\web_assignment\\ToDoList\\ToDoList\\ToDoList.csproj",
+      "projectUniqueName": "C:\\Users\\baral\\OneDrive\\Desktop\\web_assignment\\github\\ToDo_assignment2\\ToDoList\\ToDoList.csproj",
       "projectName": "ToDoList",
-      "projectPath": "C:\\Users\\baral\\OneDrive\\Desktop\\web_assignment\\ToDoList\\ToDoList\\ToDoList.csproj",
+      "projectPath": "C:\\Users\\baral\\OneDrive\\Desktop\\web_assignment\\github\\ToDo_assignment2\\ToDoList\\ToDoList.csproj",
       "packagesPath": "C:\\Users\\baral\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\baral\\OneDrive\\Desktop\\web_assignment\\ToDoList\\ToDoList\\obj\\",
+      "outputPath": "C:\\Users\\baral\\OneDrive\\Desktop\\web_assignment\\github\\ToDo_assignment2\\ToDoList\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\baral\\AppData\\Roaming\\NuGet\\NuGet.Config",

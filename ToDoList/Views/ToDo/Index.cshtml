@@ -1,12 +1,32 @@
-﻿@model ToDoLists
+﻿@model IEnumerable<ToDoList.Models.ToDoLists>
 
 @{
     ViewData["Title"] = "ToDo";
 }
 
+<div class="container">
+    <div class="row">
+        <div class="text-center">
+<h1>ToDo List</h1>
+
+<p>
+    <a asp-action="Create" class= "btn-primary createbtn" >Create New</a>
+</p>
+</div>
 
 
+<div class="col-md-4"></div>
+<div class="col-md-4">
+@foreach (var item in Model) {
+   <ul class="list-group">
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+            @Html.DisplayFor(modelItem => item.ToDoValue)
+  </li>
+  </ul>
+}
+</div>
+    </div>
+</div>
 
 
-
-<hello>rojan</hello>
