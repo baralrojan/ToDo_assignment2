@@ -8,15 +8,15 @@ namespace ToDoList.Controllers
 {
     public class ToDoController : Controller
     {
-       // public ToDoLists ToDoList = new ToDoLists() { ToDoValue = "Read 2 hours daily" };
 
         public ToDoContext _db;
 
         public ToDoController(ToDoContext ctx)
         {
-            _db = ctx;
+            _db = ctx;//initialize ToDoContext to _db
         }
 
+        //get all TodoList from databse and return it to index
         public IActionResult Index()
         {
             var TodoList = _db.ToDoList.ToList();
@@ -29,6 +29,7 @@ namespace ToDoList.Controllers
             return View();
         }
 
+        //save user entered Todo to the database
         [HttpPost]
         public RedirectResult Create(ToDoLists ToDo)
         {
@@ -37,6 +38,7 @@ namespace ToDoList.Controllers
                 _db.ToDoList.Add(ToDo);
                 _db.SaveChanges();
             }
+            //redirect result to the index page
             return Redirect("Index");
 
         }
